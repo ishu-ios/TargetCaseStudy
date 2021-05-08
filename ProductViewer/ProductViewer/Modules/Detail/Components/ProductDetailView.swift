@@ -11,6 +11,7 @@ import Tempo
 
 final class ProductDetailView: UIView {
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var salePriceLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var productImage: UIImageView!
     var addToCardHandler: (() -> Void)!

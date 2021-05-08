@@ -63,11 +63,21 @@
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$9.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NfJ-qy-QXL">
+                    <rect key="frame" x="107" y="298" width="50.5" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="mjH-mB-mF6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="sbG-SJ-jPG"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="XbT-8N-pV0" firstAttribute="top" secondItem="BFf-Rz-bcV" secondAttribute="top" constant="24" id="6o9-OB-H0S"/>
+                <constraint firstItem="NfJ-qy-QXL" firstAttribute="centerY" secondItem="cYl-1A-5ge" secondAttribute="centerY" id="7mm-ML-abV"/>
                 <constraint firstItem="sbG-SJ-jPG" firstAttribute="trailing" secondItem="dRw-VL-aQE" secondAttribute="trailing" constant="16" id="DI7-Or-O5H"/>
                 <constraint firstItem="N3J-cu-6r1" firstAttribute="top" secondItem="K8w-Gq-X6n" secondAttribute="bottom" constant="10" id="FRY-ne-39T"/>
                 <constraint firstItem="K8w-Gq-X6n" firstAttribute="leading" secondItem="dRw-VL-aQE" secondAttribute="leading" id="Gj7-wT-nho"/>
@@ -76,6 +86,7 @@
                 <constraint firstItem="N3J-cu-6r1" firstAttribute="width" secondItem="K8w-Gq-X6n" secondAttribute="width" id="MHc-OJ-AAv"/>
                 <constraint firstItem="dRw-VL-aQE" firstAttribute="top" secondItem="cYl-1A-5ge" secondAttribute="bottom" constant="-2" id="NBX-Di-yjg"/>
                 <constraint firstItem="N3J-cu-6r1" firstAttribute="height" secondItem="K8w-Gq-X6n" secondAttribute="height" id="b0t-wo-Nyi"/>
+                <constraint firstItem="NfJ-qy-QXL" firstAttribute="leading" secondItem="cYl-1A-5ge" secondAttribute="trailing" constant="10" id="bnu-RV-yhL"/>
                 <constraint firstItem="sbG-SJ-jPG" firstAttribute="trailing" secondItem="XbT-8N-pV0" secondAttribute="trailing" constant="24" id="cP1-do-ANZ"/>
                 <constraint firstItem="cYl-1A-5ge" firstAttribute="leading" secondItem="sbG-SJ-jPG" secondAttribute="leading" constant="16" id="ejE-zn-pU5"/>
                 <constraint firstItem="XbT-8N-pV0" firstAttribute="leading" secondItem="sbG-SJ-jPG" secondAttribute="leading" constant="24" id="gpg-Vw-HLv"/>
@@ -87,8 +98,9 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="descriptionLabel" destination="dRw-VL-aQE" id="VI4-E0-l9q"/>
-                <outlet property="priceLabel" destination="cYl-1A-5ge" id="yVy-rG-JOx"/>
+                <outlet property="priceLabel" destination="NfJ-qy-QXL" id="CU4-eb-9sV"/>
                 <outlet property="productImage" destination="XbT-8N-pV0" id="nZX-DV-XXv"/>
+                <outlet property="salePriceLabel" destination="cYl-1A-5ge" id="HHH-x8-dct"/>
             </connections>
             <point key="canvasLocation" x="265.94202898550725" y="346.54017857142856"/>
         </view>

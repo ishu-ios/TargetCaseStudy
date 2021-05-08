@@ -19,7 +19,17 @@ struct ProductDetailComponent: Component {
 
     func configureView(_ view: ProductDetailView, item: DetailItemViewState) {
         view.descriptionLabel.text = item.description
-        view.priceLabel.text = item.price
+        if let sale = item.salePrice {
+            view.salePriceLabel.text = sale
+            let attrString = NSAttributedString(string: item.price, attributes: [NSAttributedString.Key.strikethroughStyle: NSUnderlineStyle.single.rawValue])
+            view.priceLabel.attributedText = attrString
+           
+        } else {
+            view.priceLabel.text = ""
+            view.salePriceLabel.text = item.price
+        }
+        
+        
         view.productImage.loadImageUsingCache(withUrl: item.imageUrl, placholder: UIImage(named: "1"))
         
        

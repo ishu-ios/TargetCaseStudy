@@ -75,7 +75,7 @@ class ListCoordinator: TempoCoordinator {
 
     func updateProductsState(products:[ProductElement]) {
         viewState.listItems = products.map { product in
-            ListItemViewState(productId: product.id ?? 0, title: product.title ?? "NO Product", price: product.regularPrice?.displayString ?? "$0.0", aisle: product.aisle ?? "B2",imageUrl: product.imageURL ?? "")
+            ListItemViewState(productId: product.id ?? 0, title: product.title ?? "NO Product", price: product.regularPrice?.displayString ?? "$0.0", salePrice: product.salePrice?.displayString, aisle: product.aisle ?? "B2",imageUrl: product.imageURL ?? "")
         }
         DispatchQueue.main.async {
             self.viewController.showHideLoading(show: false)

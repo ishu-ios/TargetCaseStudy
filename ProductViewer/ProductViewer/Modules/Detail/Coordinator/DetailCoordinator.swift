@@ -79,7 +79,7 @@ class DetailCoordinator: TempoCoordinator {
 
     
     func updateProductsState(product:ProductElement) {
-        viewState.detailItems = [DetailItemViewState(name: product.title ?? "", description: product.productDescription ?? "", price: product.regularPrice?.displayString ?? "$0.0", imageUrl: product.imageURL ?? "")]
+        viewState.detailItems = [DetailItemViewState(name: product.title ?? "", description: product.productDescription ?? "", price: product.regularPrice?.displayString ?? "$0.0", salePrice: product.salePrice?.displayString, imageUrl: product.imageURL ?? "")]
         
     }
     

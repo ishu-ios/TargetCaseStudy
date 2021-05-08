@@ -25,6 +25,15 @@ struct ProductListComponent: Component {
     
     func configureView(_ view: ProductListView, item: ListItemViewState) {
         view.titleLabel.text = item.title
+        if let sale = item.salePrice {
+            view.priceLabel.text = sale
+            let attrString = NSAttributedString(string: item.price, attributes: [NSAttributedString.Key.strikethroughStyle: NSUnderlineStyle.single.rawValue])
+            view.regularPriceLabel.attributedText = attrString
+           
+        } else {
+            view.regularPriceLabel.text = ""
+            view.priceLabel.text = item.price
+        }
         view.priceLabel.text = item.price
         view.aisleLabel.text = item.aisle.uppercased()
         view.productImage.loadImageUsingCache(withUrl: item.imageUrl, placholder: UIImage(named: "1"))

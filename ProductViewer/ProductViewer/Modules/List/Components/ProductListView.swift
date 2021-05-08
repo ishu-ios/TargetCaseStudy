@@ -11,6 +11,7 @@ import Tempo
 final class ProductListView: UIView {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var regularPriceLabel: UILabel!
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var aisleLabel: UILabel!
 }
