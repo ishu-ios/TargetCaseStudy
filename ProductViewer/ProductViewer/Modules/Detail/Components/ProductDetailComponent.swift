@@ -51,8 +51,15 @@ struct ProductDetailComponent: Component {
 
 extension ProductDetailComponent: HarmonyLayoutComponent {
     func heightForLayout(_ layout: HarmonyLayout, item: TempoViewStateItem, width: CGFloat) -> CGFloat {
+        // TODO : Need automatic calculated height
+        if let _items = item as? DetailItemViewState {
+           let height =  _items.description.height(withConstrainedWidth: (width - 32), font: UIFont.systemFont(ofSize: 17))
+            let computedHeight = height + 500
+            
+            return computedHeight
+        }
         
-        // TODO : Need automatic calculated height 
         return 1000
+       
     }
 }

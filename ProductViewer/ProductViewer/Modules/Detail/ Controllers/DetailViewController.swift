@@ -53,7 +53,7 @@ class DetailViewController: UIViewController {
         coordinator.presenters = [
             SectionPresenter(adapter: collectionViewAdapter),
         ]
-
+        collectionView.backgroundColor = .white
     }
     
     override func viewDidAppear(_ animated: Bool) {
